@@ -1,2 +1,3 @@
-/.prettierrc
-/.zip
+*.zip
+*.json
+with_user_page_markup.zip
