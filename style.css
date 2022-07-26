@@ -239,13 +239,14 @@ a {
 .photo {
 	border-radius: 8px;
 	gap: 15px;
-	padding-top: 10px;
-	margin: 20px;
-	display: flex;
 	align-items: center;
 	justify-content: center;
 	flex-direction: column;
+	justify-content: center;
+	flex-direction: column;
 	width: 200px;
+	text-align: center;
+	margin-top: 12px;
 }
 .photo:hover {
 	background-color: #d8d8d8;
@@ -253,12 +254,37 @@ a {
 	text-decoration: underline;
 	transition: 0.5s ease-in;
 }
-.photo > img {
+.foto{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	font-size: 16px;
+	width: 100%;
+	padding: 12px;
+}
+.foto> img {
 	border-radius: 50%;
 }
 .photos-wrapper {
-	display: grid;
-	grid-template-columns: repeat(2, 1fr);
-	grid-gap: 10px;
-	grid-auto-flow: dense;
+	display: flex;
+	flex-wrap: wrap;
+	margin-top: 12px;
+
 }
+.photos-wrapper.foto {
+  flex: 50%; /* or - flex: 0 50% - or - flex-basis: 50% - */
+  /*demo*/
+  box-shadow: 0 0 0 1px black;
+  margin-bottom: 10px;
+}
+/* .photos{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	} */
+	.photo-text {
+		margin-top: 18px;
+	}

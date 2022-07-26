@@ -32,7 +32,7 @@ const loadPosts = async () => {
     itemTextEl.classList.add('post_wrap-text');
     itemTextEl.innerText = item.body;
     itemWrapEl.appendChild(itemTextEl);
-
+   
     // link wrap el and link el
     const itemLinkWrapEl = document.createElement('div');
     itemLinkWrapEl.classList.add('post_wrap-read-more');
@@ -42,6 +42,7 @@ const loadPosts = async () => {
     itemLinkWrapEl.appendChild(itemLinkEl);
     itemWrapEl.appendChild(itemLinkWrapEl);
     containerEl.appendChild(itemWrapEl);
+
   });
 };
 

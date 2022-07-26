@@ -21,8 +21,8 @@ const loadAlbumPhotos = async () => {
 		const photoResponse = await fetch(
 			`https://jsonplaceholder.typicode.com/albums/${albumId}/photos`,
 		);
-		const photoData = await photoResponse.json();
-		// photoData = photoData.slice(0, 20);
+		let photoData = await photoResponse.json();
+		photoData = photoData.slice(0, 9);
 
 		//title = photo
 		const photoTitle = document.createElement('h3');
@@ -38,8 +38,8 @@ const loadAlbumPhotos = async () => {
 
 		photoData.forEach(el => {
 			const photoContainer = document.createElement('div');
-			photoContainer.classList.add('photos');
-			photoContainer.innerHTML = `<div class="photo"><img src="${el.url}" width="200" alt="photo" />${el.title}</div>`;
+			photoContainer.classList.add('photo');
+			photoContainer.innerHTML = `<div class="foto"><img src="${el.url}" width="150" alt="photo" /><div class="photo-text">${el.title}</div></div>`;
 			photosWrapper.appendChild(photoContainer);
 		});
 
